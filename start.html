@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#333333">
+    <title>Bot</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="reset-form.css?v2" rel="stylesheet">
+    <link href="base.css?v2" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Cheap Bot</h1>
+    <small class="label" id="lang" onchange="changeLang()"></small>
+    <small class="label" id="label-n">Object</small><input type="text" id="1">
+    <small class="label" id="label-b">What did the object do?</small><input type="text" id="2">
+    <small class="label" id="label-attitude">Attitude：</small>
+    <input type="radio" name ="attitude" id="r1" value="support"><label for="support" id="label-support">Positive</label>
+    <input type="radio" name ="attitude" id="r2" value="condemn" checked><label for="condemn" id="label-condemn">Negative</label>
+    <div class="actions">
+        <div class="button clickable" id="btn-generate" onclick="generate()">Answer</div>
+        <img class="shuffle clickable" onclick="random()" src="shuffle.svg">
+    </div>
+    <div id="text"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
